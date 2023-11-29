@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +9,13 @@ namespace Lab7_c
     public class Bibliotek
     {
         Dictionary<int, Buch> bucherDict = new Dictionary<int, Buch>();
+
+
+        public Dictionary<int, Buch> BucherDict
+        {
+            get => bucherDict;
+            set => bucherDict = value;
+        }
         public void AddBuch(Buch neuBuch)
         {
             if (neuBuch is not null)
